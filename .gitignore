@@ -7,5 +7,15 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
-# https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
+
+**/mvnw
+**/mvnw.cmd
+
+**/.mvn
+**/target
+
+.idea
+
+#其他子模块的 .gitignore 不要推送
+**/.gitignore
