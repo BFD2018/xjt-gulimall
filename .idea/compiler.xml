@@ -11,6 +11,7 @@
         <module name="gulimall-order" />
         <module name="gulimall-ware" />
         <module name="gulimall-third-party" />
+        <module name="gulimall-gateway" />
         <module name="gulimall-product" />
         <module name="renren-fast" />
         <module name="renren-generator" />
@@ -19,8 +20,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="gulimall-common" target="1.5" />
+      <module name="gulimall-common" target="1.8" />
       <module name="gulimall-coupon" target="1.5" />
+      <module name="gulimall-gateway" target="1.8" />
       <module name="gulimall-member" target="1.5" />
       <module name="gulimall-order" target="1.5" />
       <module name="gulimall-product" target="1.8" />
