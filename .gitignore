@@ -15,6 +15,8 @@ buildNumber.properties
 **/.mvn
 **/target
 
+**/*.iml
+
 .idea
 
 #其他子模块的 .gitignore 不要推送

@@ -21,16 +21,16 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="gulimall-common" target="1.8" />
-      <module name="gulimall-coupon" target="1.5" />
+      <module name="gulimall-coupon" target="8" />
       <module name="gulimall-gateway" target="1.8" />
-      <module name="gulimall-member" target="1.5" />
-      <module name="gulimall-order" target="1.5" />
+      <module name="gulimall-member" target="8" />
+      <module name="gulimall-order" target="8" />
       <module name="gulimall-product" target="1.8" />
       <module name="gulimall-third-party" target="1.8" />
-      <module name="gulimall-ware" target="1.5" />
+      <module name="gulimall-ware" target="8" />
       <module name="renren-fast" target="1.8" />
       <module name="renren-generator" target="1.8" />
-      <module name="xjt-gulimall" target="1.5" />
+      <module name="xjt-gulimall" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

@@ -9,7 +9,6 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
-
     gateway:
       discovery:
         locator:
@@ -20,7 +19,6 @@ spring:
           predicates:
             - Path=/api/product/**
           filters:
-  #          - StripPrefix=1   #转发之前去掉第一层路由
             - RewritePath=/api/product/(?<segment>/?.*),/product/$\{segment}
 
         - id: renren-fast
@@ -28,15 +26,8 @@ spring:
           predicates:
             - Path=/api/sys/**
           filters:
-            - RewritePath=/api/sys/(?<segment>/?.*),/sys/$\{segment}
-#
-#        - id: third_party_route
-#          uri: lb://gulimall-third-party
-#          predicates:
-#            - Path=/api/thirdparty/**
-#          filters:
-#            - RewritePath=/api/thirdparty/(?<segment>/?.*),/$\{segment}
-#
+            - RewritePath=/api/(?<segment>/?.*),/$\{segment}
+
 #暴露所有端点
 management:
   endpoints:

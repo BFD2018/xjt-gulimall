@@ -12,11 +12,12 @@ module.exports = {
     assetsPublicPath: '/',
     // 代理列表, 是否开启代理通过[./dev.env.js]配置
     proxyTable: devEnv.OPEN_PROXY === false ? {} : {
-      '/proxyApi': {
-        target: 'http://localhost:88/proxyApi',
-        changeOrigin: true,
+      '/api': {
+        target: 'http://localhost:88/api',
+        ws: false,
+        changOrigin: true,      //允许跨域
         pathRewrite: {
-          '^/proxyApi': '/'
+          '^/api': ''
         }
       }
     },
@@ -24,7 +25,7 @@ module.exports = {
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8000, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
-    autoOpenBrowser: true,
+    autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
