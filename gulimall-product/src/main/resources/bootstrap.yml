@@ -1,0 +1,13 @@
+server:
+  port: 8300
+  servlet:
+    session:
+      timeout: 30m
+
+spring:
+  application:
+    name: gulimall-product
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848

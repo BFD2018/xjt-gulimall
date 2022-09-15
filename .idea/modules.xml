@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/gulimall.iml" filepath="$PROJECT_DIR$/gulimall.iml" />
       <module fileurl="file://$PROJECT_DIR$/gulimall-common/gulimall-common.iml" filepath="$PROJECT_DIR$/gulimall-common/gulimall-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/gulimall-coupon/gulimall-coupon.iml" filepath="$PROJECT_DIR$/gulimall-coupon/gulimall-coupon.iml" />
       <module fileurl="file://$PROJECT_DIR$/gulimall-gateway/gulimall-gateway.iml" filepath="$PROJECT_DIR$/gulimall-gateway/gulimall-gateway.iml" />
@@ -12,7 +13,6 @@
       <module fileurl="file://$PROJECT_DIR$/gulimall-ware/gulimall-ware.iml" filepath="$PROJECT_DIR$/gulimall-ware/gulimall-ware.iml" />
       <module fileurl="file://$PROJECT_DIR$/renren-fast/renren-fast.iml" filepath="$PROJECT_DIR$/renren-fast/renren-fast.iml" />
       <module fileurl="file://$PROJECT_DIR$/renren-generator/renren-generator.iml" filepath="$PROJECT_DIR$/renren-generator/renren-generator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/xjt-gulimall.iml" filepath="$PROJECT_DIR$/xjt-gulimall.iml" />
     </modules>
   </component>
 </project>

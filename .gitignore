@@ -17,7 +17,9 @@ buildNumber.properties
 
 **/*.iml
 
-.idea
+**/.idea
+
+**/node_modules
 
 #其他子模块的 .gitignore 不要推送
 **/.gitignore

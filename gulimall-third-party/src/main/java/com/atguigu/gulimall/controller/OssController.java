@@ -13,8 +13,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 @RestController
+@RequestMapping("thirdparty")
 public class OssController {
-    //浏览器获取
+    //TODO aliyun-oss图片上传（授权浏览器直接上传到阿里云）
     @RequestMapping("/oss/policy")
     public R policy() {
         String accessId = "<yourAccessKeyId>"; // 请填写您的AccessKeyId。
