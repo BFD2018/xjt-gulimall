@@ -2,8 +2,7 @@
   <el-dialog
       :title="!dataForm.id ? '新增' : '修改'"
       :close-on-click-modal="false"
-      :visible.sync="visible"
-  >
+      :visible.sync="visible">
     <el-form
         :model="dataForm"
         :rules="dataRule"
@@ -15,7 +14,7 @@
         <el-input v-model="dataForm.name" placeholder="品牌名"></el-input>
       </el-form-item>
       <el-form-item label="品牌logo地址" prop="logo">
-        <!-- <el-input v-model="dataForm.logo" placeholder="品牌logo地址"></el-input> -->
+        <!-- 文件上传       -->
         <single-upload v-model="dataForm.logo"></single-upload>
       </el-form-item>
       <el-form-item label="介绍" prop="descript">
@@ -46,6 +45,7 @@
 
 <script>
 import SingleUpload from "@/components/upload/singleUpload";
+
 export default {
   components: { SingleUpload },
   data() {

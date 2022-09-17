@@ -55,7 +55,7 @@
           prop="showStatus"
           header-align="center"
           align="center"
-          label="显示状态[0-不显示；1-显示]">
+          label="显示状态">
         <template slot-scope="scope">
           <el-switch
               v-model="scope.row.showStatus"
