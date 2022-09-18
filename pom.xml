@@ -43,6 +43,7 @@
 	</properties>
 
 
+
 	<!--  子模块继承父模块之后，提供作用：锁定版本 + 子模块不用再写 version  -->
 	<dependencyManagement>
 		<dependencies>

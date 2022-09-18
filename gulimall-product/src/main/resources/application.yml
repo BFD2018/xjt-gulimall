@@ -35,6 +35,8 @@ mybatis-plus:
       #逻辑删除
       logic-delete-value: 1
       logic-not-delete-value: 0
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 logging:
   level:

@@ -16,9 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 
@@ -92,6 +90,26 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
     public void updateCascade(CategoryEntity category) {
         //TODO 级联更新
 
+    }
+
+    @Override
+    public Long[] findCatalogPath(Long catelogId) {
+        List<Long> paths = new ArrayList<>();
+        List<Long> parentPath = findParentPath(catelogId, paths);
+
+        Collections.reverse(parentPath);
+        return parentPath.toArray(new Long[parentPath.size()]);
+    }
+
+    //返回分类路径 225,34,2
+    private List<Long> findParentPath(Long catelogId, List<Long> paths) {
+        //1、收集当前节点id
+        paths.add(catelogId);
+        CategoryEntity byId = this.getById(catelogId);
+        if (byId.getParentCid() != 0) {
+            findParentPath(byId.getParentCid(), paths);
+        }
+        return paths;
     }
 
 
