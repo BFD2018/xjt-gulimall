@@ -110,7 +110,7 @@
       <el-popover placement="right-end" v-model="popCatelogSelectVisible">
         <category-cascader :catelogPath.sync="catelogPath"></category-cascader>
         <div style="text-align: right; margin: 0">
-          <el-button size="mini" type="text" @click="popCatelogSelectVisible = false">取消</el-button>
+          <el-button size="mini" type="text" @click="cancelRelationDialog">取消</el-button>
           <el-button type="primary" size="mini" @click="addCatelogSelect">确定</el-button>
         </div>
         <el-button slot="reference">新增关联</el-button>
@@ -170,6 +170,10 @@ export default {
     this.getDataList()
   },
   methods: {
+    cancelRelationDialog() {
+      this.popCatelogSelectVisible = false;
+      this.catelogPath = [];
+    },
     addCatelogSelect() {
       //{"brandId":1,"catelogId":2}
       this.popCatelogSelectVisible = false;
@@ -185,12 +189,24 @@ export default {
       });
     },
     deleteCateRelationHandle(id, brandId) {
-      this.$http({
-        url: this.$http.adornUrl("/product/categorybrandrelation/delete"),
-        method: "post",
-        data: this.$http.adornData([id], false)
-      }).then(({data}) => {
-        this.getCateRelation();
+      console.log(id);
+      this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        this.$http({
+          url: this.$http.adornUrl("/product/categorybrandrelation/delete"),
+          method: "post",
+          data: this.$http.adornData([id], false)
+        }).then(({data}) => {
+          this.getCateRelation();
+        });
+      }).catch(() => {
+        this.$message({
+          type: 'info',
+          message: '已取消删除'
+        });
       });
     },
     updateCatelogHandle(brandId) {
