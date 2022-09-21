@@ -21,6 +21,7 @@
 		<module>gulimall-third-party</module>		<!--第三方服务-->
 		<module>gulimall-gateway</module>		<!--网关-->
 		<module>renren-generator</module>
+		<module>gulimall-search</module>
 	</modules>
 
 	<!--  这里的属性会被子模块继承  -->

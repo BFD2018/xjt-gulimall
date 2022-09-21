@@ -8,15 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="gulimall-coupon" />
-        <module name="gulimall-common" />
+        <module name="gulimall-order" />
         <module name="renren-generator" />
         <module name="gulimall-third-party" />
+        <module name="gulimall-search" />
         <module name="gulimall-gateway" />
         <module name="gulimall-product" />
-        <module name="gulimall-order" />
         <module name="renren-fast" />
-        <module name="gulimall-member" />
         <module name="gulimall-ware" />
+        <module name="gulimall-member" />
+        <module name="gulimall-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -27,6 +28,7 @@
       <module name="gulimall-member" target="8" />
       <module name="gulimall-order" target="8" />
       <module name="gulimall-product" target="1.8" />
+      <module name="gulimall-search" target="8" />
       <module name="gulimall-third-party" target="8" />
       <module name="gulimall-ware" target="8" />
       <module name="renren-fast" target="1.8" />
